@@ -87,14 +87,22 @@ header .profile-image:hover {
   color: white;
 }
 .card {
+  flex-basis: 100%;
   float: left;
-  margin: 30px;
-  padding: 20px 40px 40px;
   max-width: 500px;
+  margin: 30px;
+  padding: 20px 40px 20px;
   text-align: left;
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
+}
+
+.card-below{
+  float: left;
+  margin: 30px;
+  padding: 20px 40px 40px;
+  text-align: left;
 }
 
 .card:hover {
@@ -167,16 +175,24 @@ a.social:hover {
   clear: both;
 }
 
+@media screen and (min-width:481px){
+	body:after{content:"481px and larger"}	
+}
+@media screen and (min-width:769px){
+	body:after{content:"769px and larger"}	
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
   .flex {
       display: flex;
+      flex-wrap: wrap;
       max-width: 1200px;
       justify-content: space-around;
       margin: 0 auto;
   }
-
+    
   header {
     min-height: 450px;
   }
@@ -209,7 +225,7 @@ a.social:hover {
   main {
     padding-top: 50px;
   }
-
+  
   main p {
     line-height: 1.6em;
   }
